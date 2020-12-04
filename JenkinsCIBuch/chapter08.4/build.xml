@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="AntSample" default="full" basedir=".">
+
+    <description>Sample ANT Build</description>
+
+    <!-- ======================== GLOBAL Properties ======================== -->
+    <property name="source.dir"  location="src" />
+    <property name="libs"        location="libs" />
+    <property name="deploy.dir"  location="target" />
+
+    <path id="classpath">
+        <pathelement location="${libs}" />
+    </path>
+
+    <target name="full">
+        <echo message="Clean" />
+        <antcall target="clean" />
+
+        <echo message="Compile" />
+        <antcall target="compile-java" />
+
+        <echo message="Package" />
+        <antcall target="package-jar" />
+    </target>
+    <!-- =================================================================== -->
+
+    <target name="clean" description="Clean the complete Output DIR.">
+        <delete dir="${deploy.dir}" />
+    </target>
+
+    <target name="compile-java" description="Compile the JAVA Sourcefiles">
+        <mkdir dir="${deploy.dir}" />
+        <javac
+             srcdir="${source.dir}"
+             destdir="${deploy.dir}"
+             includes="**/*.java"
+             source="1.8"
+             target="1.8"
+             debug="on">
+            <classpath refid="classpath" />
+        </javac>
+    </target>
+
+    <target name="package-jar" description="Package all Calsses to a JAR"
+            depends="compile-java">
+
+        <jar destfile="${deploy.dir}/sample.jar">
+            <fileset dir="${deploy.dir}"/>
+            <manifest>
+                <attribute name="Main-Class" value="org.sample.ant.Main"/>
+            </manifest>
+            <archives>
+                <zips>
+                    <fileset dir="lib/" includes="**/*.jar"/>
+                </zips>
+            </archives>
+        </jar>
+    </target>
+</project>
