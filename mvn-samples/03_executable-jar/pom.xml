@@ -7,6 +7,8 @@
                         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <name>03: executable-jar</name>
+
     <groupId>io.github.together.samples</groupId>
     <artifactId>executable-jar</artifactId>
     <version>1.0-SNAPSHOT</version>

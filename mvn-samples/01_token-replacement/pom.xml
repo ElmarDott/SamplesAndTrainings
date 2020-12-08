@@ -7,6 +7,8 @@
                         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <name>01: token-replacement</name>
+
     <groupId>io.github.together.samples</groupId>
     <artifactId>token-replacement</artifactId>
     <version>1.0-SNAPSHOT</version>

@@ -7,6 +7,8 @@
                         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <name>Maven Sampels</name>
+
     <groupId>io.github.together.samples</groupId>
     <artifactId>reactor-pom</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -19,5 +21,6 @@
         <module>04_enforcements</module>
         <module>05_testing</module>
         <module>06_multi-module</module>
+        <module>07_bom</module>
     </modules>
 </project>
