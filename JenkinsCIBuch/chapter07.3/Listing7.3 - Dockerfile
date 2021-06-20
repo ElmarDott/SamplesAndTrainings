@@ -1,0 +1,9 @@
+FROM ubuntu
+RUN mkdir -p /var/run/sshd
+RUN apt -y update
+RUN apt install -y openjdk-11-jre
+RUN apt install -y openssh-server
+RUN ssh-keygen –A
+ADD ./ssh_config /etc/ssh/sshd_config
+RUN echo root:g3h31mn1s | chpasswd
+CMD ["/usr/sbin/sshd", "-D"]

@@ -7,17 +7,16 @@
                         http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <name>JUnit5</name>
-    <description>Komponenten Tests mit JUnit und Maven</description>
+    <name>JAVA Snipptes</name>
+    <description>Some simple tryouts in Java</description>
 
     <groupId>io.github.together.courses</groupId>
-    <artifactId>tdd-testing</artifactId>
+    <artifactId>java-snippets</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <build>
         <plugins>
-            <!-- aktiviert compiler warnings -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -35,63 +34,17 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
-                <!-- continue the build if a test fail -->
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.9.1</version>
-                <configuration>
-                    <inputEncoding>UTF-8</inputEncoding>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
-    <!-- generieren des reports über die kommandozeile: mvn site -->
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>3.1.2</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>3.0.0-M5</version>
-            </plugin>
-        </plugins>
-    </reporting>
-
     <dependencies>
-        <!-- BeanMatcherTest -->
-        <dependency>
-            <groupId>com.google.code.bean-matchers</groupId>
-            <artifactId>bean-matchers</artifactId>
-            <version>0.13</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- JUnit 5 Abhänigkeiten -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.7.2</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.7.2</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
             <version>5.7.2</version>
             <scope>test</scope>
         </dependency>

@@ -17,21 +17,29 @@
 
     <build>
         <plugins>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
             </plugin>
+            <!-- skip unit tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M4</version>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
             </plugin>
+            <!-- use maven intergation tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.0.0-M4</version>
+                <version>3.0.0-M5</version>
                 <executions>
                     <execution>
                         <goals>
@@ -41,10 +49,11 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- JGiven BDD Framework -->
             <plugin>
                 <groupId>com.tngtech.jgiven</groupId>
                 <artifactId>jgiven-maven-plugin</artifactId>
-                <version>0.18.2</version>
+                <version>1.0.0</version>
                 <executions>
                     <execution>
                         <phase>pre-site</phase>
@@ -62,34 +71,48 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.8.2</version>
+                <version>3.9.1</version>
+                <configuration>
+                    <inputEncoding>UTF-8</inputEncoding>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.1.2</version>
+            </plugin>
+        </plugins>
+    </reporting>
 
     <dependencies>
         <dependency>
             <groupId>com.tngtech.jgiven</groupId>
             <artifactId>jgiven-core</artifactId>
-            <version>0.18.2</version>
+            <version>1.0.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.tngtech.jgiven</groupId>
             <artifactId>jgiven-junit5</artifactId>
-            <version>0.18.2</version>
+            <version>1.0.0</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.6.0</version>
+            <version>5.7.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-runner</artifactId>
-            <version>1.6.0</version>
+            <version>1.7.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

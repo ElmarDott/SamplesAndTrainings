@@ -1,19 +1,1 @@
 target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
-/mvn-samples/05_testing/nbproject/
-/JenkinsCIBuch/chapter08.4/nbproject/private/
-/JenkinsCIBuch/chapter08.4/dist/
-/JenkinsCIBuch/chapter08.4/build/
-/JenkinsCIBuch/chapter08.4-3/GradleSample/.gradle/
-/JenkinsCIBuch/chapter08.4-3/GradleSample/build/
-/JenkinsCIBuch/chapter08.4-3/myProject/.gradle/
-/JenkinsCIBuch/chapter08.4-1/nbproject/private/

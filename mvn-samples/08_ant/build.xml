@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="AntSample" default="sample" basedir=".">
+
+    <description>Sample ANT Build</description>
+
+    <target name="sample">
+        <echo message="Apache ANT called from Apache Maven POM." />
+    </target>
+</project>

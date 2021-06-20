@@ -22,5 +22,6 @@
         <module>05_testing</module>
         <module>06_multi-module</module>
         <module>07_bom</module>
+        <module>08_ant</module>
     </modules>
 </project>

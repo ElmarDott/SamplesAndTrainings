@@ -1,0 +1,3 @@
+sudo apt install docker.i
+sudo groupadd docker
+sudo gpasswd -a <UserName> docker
