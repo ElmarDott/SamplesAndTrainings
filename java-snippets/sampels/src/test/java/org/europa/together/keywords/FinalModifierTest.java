@@ -1,10 +1,8 @@
 package org.europa.together.keywords;
 
-import org.europa.together.keywords.FinalModifier;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 /**
