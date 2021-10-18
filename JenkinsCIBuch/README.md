@@ -12,7 +12,9 @@ Dieses Praxisbuch zeigt Ihnen, wie Sie mit Jenkins, Git und Nexus eine  CI-Pipel
 
 Zum Buch: https://www.rheinwerk-verlag.de/continuous-integration-mit-jenkins/
 
-Coding Beispiele
+Homepage: https://elmar-dott.com
+
+Coding Beispiele:
 
 - chapter04.1 Test Driven Development (Maven/Java)
   - JUnit5Test
