@@ -1,0 +1,25 @@
+How to create a postgresql docker container
+
+# step 1 - create the container to inizialize the DB
+docker run -d --name pg-dbms --restart=no \
+--net services --ip 172.18.0.20 \
+-e POSTGRES_PASSWORD=s3cr3t \
+-e PGPASSWORD=s3cr3t \
+postgres:11
+
+# step 2 - copy DB dir to the host
+docker cp pg-dbms:/var/lib/postgresql/data /media/ed/memory/pg
+
+# step 3 - stop the container
+docker stop pg-dbms
+
+# step 4 - remove the container
+ddocker rm pg-dbms
+
+# step 5 - recreat with volume
+docker run -d --name pg-dbms --restart=no \
+--net services --ip 172.18.0.20 \
+-e POSTGRES_PASSWORD=s3cr3t \
+-e PGPASSWORD=s3cr3t \
+-v /media/ed/memory/pg:/var/lib/postgresql/data \
+postgres:11
