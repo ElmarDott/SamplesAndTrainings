@@ -10,9 +10,7 @@ Dieses Praxisbuch zeigt Ihnen, wie Sie mit Jenkins, Git und Nexus eine  CI-Pipel
 - Source Control und Release Management mit Git und Nexus
 - Integrations- und Unit-Tests, richtiges Merging, saubere Codeanalyse
 
-Zum Buch: https://www.rheinwerk-verlag.de/continuous-integration-mit-jenkins/
-
-Homepage: https://elmar-dott.com
+Homepage zum Buch: https://elmar-dott.com/books/ci-jenkins/
 
 Coding Beispiele:
 

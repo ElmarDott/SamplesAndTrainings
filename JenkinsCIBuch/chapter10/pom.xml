@@ -14,6 +14,11 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <organization>
+        <name>Elmar Dott: Software, Consulting &amp; Training</name>
+        <url>https://elmar-dott.com/books/ci-jenkins/</url>
+    </organization>
+
     <properties>
         <checkstyle.rules>${basedir}/checkstyle.xml</checkstyle.rules>
         <license.file>${basedir}/src/site/resources/license.html</license.file>

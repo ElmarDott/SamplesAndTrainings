@@ -15,6 +15,11 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <organization>
+        <name>Elmar Dott: Software, Consulting &amp; Training</name>
+        <url>https://elmar-dott.com/books/ci-jenkins/</url>
+    </organization>
+
     <properties>
         <jersey.version>2.34</jersey.version>
     </properties>

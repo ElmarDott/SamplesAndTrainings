@@ -13,8 +13,13 @@
     <groupId>io.github.together.samples</groupId>
     <artifactId>enforcement</artifactId>
     <!-- version>1.0-SNAPSHOT</version -->
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
+
+    <organization>
+        <name>Elmar Dott: Software, Consulting &amp; Training</name>
+        <url>https://elmar-dott.com/courses/</url>
+    </organization>
 
     <properties>
         <java.sdk.version>11</java.sdk.version>
@@ -53,7 +58,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.2.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

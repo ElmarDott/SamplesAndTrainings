@@ -10,7 +10,7 @@ public class Application {
 
     public void foo() {
 
-        List collection = new ArrayList();
+        List<String> collection = new ArrayList();
         collection.add("001");
         collection.add("002");
     }

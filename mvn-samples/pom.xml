@@ -23,5 +23,7 @@
         <module>06_multi-module</module>
         <module>07_bom</module>
         <module>08_ant</module>
+        <module>09_license</module>
+        <module>10_owasp</module>
     </modules>
 </project>

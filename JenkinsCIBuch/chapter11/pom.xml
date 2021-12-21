@@ -9,12 +9,17 @@
     <name>sample pom</name>
     <description>Sample project pom fpr publisching on Maven Central.</description>
     <inceptionYear>2021</inceptionYear>
-    <url>https://enrebaja.wordpress.com</url>
+    <url>https://elmar-dott.com</url>
 
     <groupId>io.github.myProject</groupId>
     <artifactId>project</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
+
+    <organization>
+        <name>Elmar Dott: Software, Consulting &amp; Training</name>
+        <url>https://elmar-dott.com/books/ci-jenkins/</url>
+    </organization>
 
     <scm>
         <connection>scm:git:https://github.com/ElmarDott/TP-CM.git</connection>
