@@ -25,5 +25,6 @@
         <module>08_ant</module>
         <module>09_license</module>
         <module>10_owasp</module>
+        <module>11_shade</module>
     </modules>
 </project>
