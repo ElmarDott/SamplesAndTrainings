@@ -1,17 +1,27 @@
-FROM php:7.4.29-apache
+FROM php:8.1.6-apache
 MAINTAINER Elmar Dott (elmar.dott@gmail.com) 
 
-RUN apt-get update
-RUN apt-get upgrade -y
-
-RUN apt-get install -y libwebp-dev postgresql-client libpng-dev libjpeg62-turbo-dev libzip-dev libxpm-dev libfreetype6-dev zlib1g-dev libmcrypt-dev libpq-dev libmagickwand-dev --no-install-recommends
-    
-RUN docker-php-ext-install exif zip mysqli pgsql pdo pdo_mysql pdo_pgsql gd soap \
-     && pecl install imagick 
-
-RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql
-
-
+RUN \
+  apt-get update && \
+  apt-get install -y --no-install-recommends \
+    exim4 \
+    postgresql-client \
+    libpq-dev \
+    libwebp-dev \
+    libpng-dev \
+    libjpeg62-turbo-dev \
+    libzip-dev \
+    libxpm-dev \
+    libfreetype6-dev \
+    zlib1g-dev \
+    libmcrypt-dev \
+    libmagickwand-dev && \
+  docker-php-ext-install exif zip gd soap pgsql pdo pdo_pgsql && \
+  pecl install imagick && \
+  docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql && \
+  docker-php-ext-install mysqli pdo_mysql && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/* /etc/rsyslog.conf
 
 ## Das image erstellen:
-##   docker /path/to/the/DOCKERFILE/ build -t php-container:7.4.29
+##   docker /path/to/the/DOCKERFILE/ build -t php-container:8.1.6
