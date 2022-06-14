@@ -24,4 +24,4 @@ RUN \
   rm -rf /var/lib/apt/lists/* /etc/rsyslog.conf
 
 ## Das image erstellen:
-##   docker /path/to/the/DOCKERFILE/ build -t php-container:8.1.6
+##   docker build /path/to/the/DOCKERFILE/ -t php-container:8.1.6
