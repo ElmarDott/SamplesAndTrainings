@@ -1,4 +1,4 @@
-package io.github.together.application;
+package io.github.together.presentation;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +10,7 @@ public class HelloWorldController {
     @RequestMapping("/sample")
     public ModelAndView hello() {
 
-        String helloWorldMessage = "Hello world from java2blog!";
+        String helloWorldMessage = "Hello world from spring boot JSP!";
         return new ModelAndView("hello", "message", helloWorldMessage);
     }
 }

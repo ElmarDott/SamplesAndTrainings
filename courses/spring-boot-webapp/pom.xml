@@ -9,7 +9,7 @@
         <version>2.7.0</version>
     </parent>
 
-    <name>Spring Bott 2.0 WebApp Demo</name>
+    <name>Spring Boot 2.0 WebApp Demo</name>
     <groupId>io.github.together.courses</groupId>
     <artifactId>spring-boot-webapp</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -17,6 +17,9 @@
 
     <properties>
         <java.version>17</java.version>
+        <maven.version>3.8</maven.version>
+
+        <license.name>Apacche License 2.0</license.name>
     </properties>
 
     <build>
@@ -75,9 +78,8 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
 
         <dependency>
@@ -85,6 +87,28 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.apiguardian</groupId>
+            <artifactId>apiguardian-api</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+
+        <!-- Prometheus integration -->
+        <!-- dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient</artifactId>
+        </dependency -->
     </dependencies>
 
     <developers>
