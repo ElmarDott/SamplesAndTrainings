@@ -1,0 +1,26 @@
+### ###########################################################################
+### 		GIT Befehlsreferenz
+### ###########################################################################
+
+git init 			| Projekt anlegen
+git init --bare 	| Projekt auf dem Server erstellen - phne Arbeitsbreich
+git clone [URI]		| Projekt vom remote Repo auschecken
+
+git config --list --show-origin		| zeigt die globale Config an
+git config --global alias.ls status | setzt für den Befehl status den alias ls
+
+git stash
+git stash list
+git stash show [stash]
+
+git stash apply
+git stash pop
+
+git branch -a 				| alle Branches (inl. remote) anzeigen
+checkout -b [branch-name]	| branch auschecken
+
+git reset --hard
+git revert HEAD
+git revert [revision]
+git checkout [revision] [file]
+

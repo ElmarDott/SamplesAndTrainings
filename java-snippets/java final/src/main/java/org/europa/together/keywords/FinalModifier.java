@@ -1,8 +1,12 @@
 package org.europa.together.keywords;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FinalModifier {
 
     public void foo() {
+
         Dimension dimension = new Dimension(5, 6);
         System.out.println("init " + dimension.toString() + "\n");
 
@@ -18,7 +22,7 @@ public class FinalModifier {
 
     public void meth01(final Dimension dimesion) {
 
-//        dimesion = new Dimension(0, 0);
+        // dimesion_01 = new Dimension(0, 0);
         System.out.println("meth01 " + dimesion.toString());
     }
 
