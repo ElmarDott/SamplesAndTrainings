@@ -1,3 +1,0 @@
-sudo apt install docker.io
-sudo groupadd docker
-sudo gpasswd -a <UserName> docker
